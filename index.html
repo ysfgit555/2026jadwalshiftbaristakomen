@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Shift Crew Barista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>Jadwal Shift Crew Barista</h1>
+    <!-- Subtitle dinamis mengikuti dropdown -->
+    <p id="judulPeriode">PERIODE: OKTOBER 2026</p>
+  </div>
+
+  <!-- Panel Kontrol: Dropdown Bulan & Filter Nama -->
+  <div class="control-panel">
+    <div class="select-box">
+      <label for="selectBulan"><strong>Pilih Bulan:</strong></label>
+      <select id="selectBulan" onchange="gantiBulan()">
+        <option value="oktober2026" selected>Oktober 2026</option>
+        <option value="november2026">November 2026</option>
+        <option value="desember2026">Desember 2026</option>
+      </select>
+    </div>
+
+    <div class="filter-container">
+      <button class="btn-filter active" onclick="filterJadwal('all')">Semua Shift</button>
+      <button class="btn-filter" onclick="filterJadwal('Yusuf')">Yusuf</button>
+      <button class="btn-filter" onclick="filterJadwal('Ahmad')">Ahmad</button>
+      <button class="btn-filter" onclick="filterJadwal('Diky')">Diky</button>
+      <button class="btn-filter btn-special" onclick="filterKombinasiKhusus()">🟢 Yusuf Pagi & Ahmad Siang</button>
+    </div>
+  </div>
+
+  <div class="info-bar">
+    <div class="info-item bg-pagi">Shift Pagi: 06.00 – 14.00</div>
+    <div class="info-item bg-siang">Shift Siang: 14.00 – 22.00</div>
+    <div class="info-item bg-team">Tim: Diky, Yusuf, Ahmad</div>
+  </div>
+
+  <table id="tableJadwal">
+    <thead>
+      <tr>
+        <th class="th-tgl">Tgl</th>
+        <th class="th-hari">Hari</th>
+        <th class="th-pagi">Pagi (06.00–14.00)</th>
+        <th class="th-siang">Siang (14.00–22.00)</th>
+        <th class="th-off">Libur (OFF)</th>
+      </tr>
+    </thead>
+    <tbody id="tbodyJadwal">
+      <!-- Data tabel diisi otomatis oleh JavaScript -->
+    </tbody>
+  </table>
+
+  <div class="notes">
+    <strong>Keterangan Hijau Muda:</strong> Shift khusus Yusuf Pagi, Ahmad Siang, Diky OFF.<br>
+    <em>* Penukaran jadwal shift wajib mengonfirmasi ke Head Bar / Manager minimal H-1.</em>
+  </div>
+
+  <table class="signature-table">
+    <tr>
+      <td>
+        Dibuat oleh,<br>
+        <div class="sig-space"></div>
+        <strong>( Head Bar )</strong>
+      </td>
+      <td>
+        Disetujui oleh,<br>
+        <div class="sig-space"></div>
+        <strong>( Manager / Owner )</strong>
+      </td>
+    </tr>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>

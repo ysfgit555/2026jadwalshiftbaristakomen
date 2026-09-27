@@ -1,0 +1,203 @@
+@page {
+  size: A4 portrait;
+  margin: 12mm 15mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #2c3e50;
+  margin: 20px;
+  background-color: #f8fafc;
+}
+
+.header {
+  text-align: center;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: #ffffff;
+  padding: 14px 10px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 20pt;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin: 4px 0 0;
+  font-size: 11pt;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+/* Panel Kontrol Dropdown & Filter */
+.control-panel {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.select-box {
+  font-size: 10pt;
+}
+
+.select-box select {
+  padding: 6px 12px;
+  font-size: 9.5pt;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  font-weight: bold;
+  color: #1e293b;
+  cursor: pointer;
+}
+
+.filter-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-filter {
+  padding: 7px 12px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #334155;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 8.5pt;
+  transition: all 0.2s ease;
+}
+
+.btn-filter:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-filter.active {
+  background-color: #1e293b;
+  color: #ffffff;
+  border-color: #1e293b;
+}
+
+.btn-special {
+  border-color: #16a34a;
+  color: #15803d;
+}
+
+.btn-special.active {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+.info-bar {
+  display: flex;
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.info-item {
+  flex: 1;
+  text-align: center;
+  font-size: 9.5pt;
+  padding: 8px 4px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.bg-pagi { background-color: #27ae60; }
+.bg-siang { background-color: #e67e22; }
+.bg-team { background-color: #8e44ad; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9pt;
+  background-color: #ffffff;
+}
+
+th {
+  color: #ffffff;
+  font-size: 9pt;
+  font-weight: bold;
+  padding: 6px 8px;
+  text-transform: uppercase;
+}
+
+th.th-tgl { background-color: #34495e; }
+th.th-hari { background-color: #2c3e50; }
+th.th-pagi { background-color: #1e8449; }
+th.th-siang { background-color: #d35400; }
+th.th-off { background-color: #c0392b; }
+
+td {
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.highlight-row td {
+  background-color: #d1e7dd !important; /* Hijau Muda */
+  font-weight: bold;
+}
+
+.text-highlight {
+  background-color: #fef08a;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.off {
+  color: #dc2626;
+}
+
+.notes {
+  margin-top: 12px;
+  font-size: 8.5pt;
+  color: #555;
+  border-top: 1px dashed #ccc;
+  padding-top: 8px;
+}
+
+.signature-table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.signature-table td {
+  border: none;
+  width: 50%;
+  text-align: center;
+  font-size: 9pt;
+  background-color: transparent;
+}
+
+.sig-space {
+  height: 40px;
+}
+
+/* Sembunyikan Panel Kontrol saat dicetak ke PDF/Kertas */
+@media print {
+  .control-panel {
+    display: none;
+  }
+  body {
+    margin: 0;
+    background-color: #ffffff;
+  }
+}
