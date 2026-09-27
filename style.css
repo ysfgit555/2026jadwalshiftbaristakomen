@@ -18,7 +18,7 @@ body {
   .logo-header {
   max-width: auto;      /* Ukuran lebar logo (bisa disesuaikan) */
   height: auto;         /* Proporsi tinggi otomatis agar tidak gepeng */
-  margin-bottom: 10px;  /* Jarak antara logo dan judul teks */
+  margin-bottom: 2px;  /* Jarak antara logo dan judul teks */
   display: block;       /* Menjadikan elemen blok agar bisa ditengah */
   margin-left: auto;    /* Mengatur posisi ke tengah (kiri) */
   margin-right: auto;   /* Mengatur posisi ke tengah (kanan) */
